@@ -1,0 +1,11 @@
+<div class="dropdown-container">
+<select [(ngModel)]="selectedOption" (ngModelChange)="onOptionChange()" [ngClass]="{'default-state': !selectedOption}">
+  <ng-container *ngIf="!selectedOption">
+    <div class="placeholder">{{ placeholder }}</div>
+    <div class="suffix-icon default-state-icon"><i class="fas fa-chevron-up"></i></div>
+  </ng-container>
+  <ng-container *ngFor="let option of options">
+    <option [value]="option.value">{{ option.label }}</option>
+  </ng-container>
+</select>
+</div>
