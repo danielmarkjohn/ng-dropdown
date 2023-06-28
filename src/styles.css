@@ -16,9 +16,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 router-outlet + *  {
   padding: 0 16px;
+}
+
+.select-placeholder {
+  color: #868686c0 !important;
+
 }

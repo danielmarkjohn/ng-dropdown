@@ -1,7 +1,14 @@
 <div class="container">
   <app-dropdown
     [options]="dropdownOptions"
-    [(selectedOption)]="selectedDropdownOption"
     (selectedOptionChange)="onDropdownOptionChange($event)"
   ></app-dropdown>
 </div>
+<p>
+  Selection:
+  {{
+    selectedDropdownOption
+      ? selectedDropdownOption?.label
+      : 'Please select an Option'
+  }}
+</p>

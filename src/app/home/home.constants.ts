@@ -6,5 +6,5 @@ export const DROPDOWN_OPTIONS = [
   { label: 'Option 5', value: 3 },
   { label: 'Option 6', value: 3 },
   { label: 'Option 7', value: 3 },
-  { label: 'Option 7', value: 3 },
+  { label: 'Option 8', value: 3 },
 ];

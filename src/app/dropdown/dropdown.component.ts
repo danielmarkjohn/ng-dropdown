@@ -7,16 +7,22 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
   @Input() options: any[] = [];
-  @Input() selectedOption: any;
-  @Output() selectedOptionChange: 
-  EventEmitter<any> = new EventEmitter<any>();
+  @Output() selectedOptionChange: EventEmitter<any> = new EventEmitter<any>();
   placeholder: string = 'Select an Option';
+  selectedOption: any;
+  dropdownOpen: boolean = false;
 
   constructor() {}
 
   ngOnInit() {}
 
-  onOptionChange() {
-    this.selectedOptionChange.emit(this.selectedOption);
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  selectOption(option: any) {
+    this.selectedOption = option;
+    this.selectedOptionChange.emit(option);
+    this.dropdownOpen = false;
   }
 }
