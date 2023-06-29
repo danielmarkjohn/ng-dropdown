@@ -1,8 +1,9 @@
 {
-  "name": "angular.io-example",
+  "name": "ng-dropdown",
   "version": "0.0.0",
-  "description": "Example project from an angular.io guide.",
+  "description": "Custom Select Dropdown Component",
   "license": "MIT",
+  "author": "Daniel Mark John",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
