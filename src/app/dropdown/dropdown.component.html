@@ -1,8 +1,10 @@
-<div class="dropdown-container"  >
+<div class="dropdown-container">
   <div class="dropdown">
     <div class="selected-option" (click)="toggleDropdown()">
-      <span [ngClass]="{'select-placeholder': !selectedOption}">{{ selectedOption ? selectedOption.label : placeholder }}</span>
-      <i class="fas fa-chevron-down"></i>
+      <span [ngClass]="{ 'select-placeholder': !selectedOption }">{{
+        selectedOption ? selectedOption.label : placeholder
+      }}</span>
+      <i [class]="getChevronIconClass()" style="color: grey;"></i>
     </div>
     <ul class="options" [class.open]="dropdownOpen">
       <li *ngFor="let option of options" (click)="selectOption(option)">

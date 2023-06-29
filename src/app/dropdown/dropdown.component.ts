@@ -1,20 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.css'],
 })
-export class DropdownComponent implements OnInit {
+export class DropdownComponent {
   @Input() options: any[] = [];
   @Output() selectedOptionChange: EventEmitter<any> = new EventEmitter<any>();
-  placeholder: string = 'Select an Option';
+  placeholder = 'Select an Option';
   selectedOption: any;
-  dropdownOpen: boolean = false;
-
-  constructor() {}
-
-  ngOnInit() {}
+  dropdownOpen = false;
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -24,5 +20,9 @@ export class DropdownComponent implements OnInit {
     this.selectedOption = option;
     this.selectedOptionChange.emit(option);
     this.dropdownOpen = false;
+  }
+
+  getChevronIconClass() {
+    return this.dropdownOpen ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
   }
 }

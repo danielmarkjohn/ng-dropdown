@@ -5,7 +5,7 @@
 
 .dropdown {
   position: relative;
-  width: 200px;
+  width: 250px;
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 4px;
@@ -62,4 +62,3 @@
   background-color: #b6f0ff60;
   cursor: pointer;
 }
-

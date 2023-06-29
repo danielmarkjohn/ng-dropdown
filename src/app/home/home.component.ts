@@ -11,7 +11,6 @@ export class HomeComponent {
   selectedDropdownOption: any;
 
   onDropdownOptionChange(option: any) {
-    console.log('Selected option:', option);
-    this.selectedDropdownOption = option
+    this.selectedDropdownOption = option;
   }
 }
